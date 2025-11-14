@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Intl } from './intl/intl';
+import { Transactions } from './transactions/transactions';
+import { MatDivider } from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MatDivider, Intl, Transactions],
   templateUrl: './app.html',
-  styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('angular-intl-example');
-}
+export class App {}

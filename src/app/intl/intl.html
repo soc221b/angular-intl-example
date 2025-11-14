@@ -1,0 +1,17 @@
+<mat-form-field>
+  <mat-label>Locale</mat-label>
+  <mat-select [value]="intlService.locale()" (valueChange)="intlService.setLocale($event)">
+    @for (locale of locales; track locale) {
+      <mat-option [value]="locale">{{ locale }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Currency</mat-label>
+  <mat-select [value]="intlService.currency()" (valueChange)="intlService.setCurrency($event)">
+    @for (currency of currencies; track currency) {
+      <mat-option [value]="currency">{{ currency }}</mat-option>
+    }
+  </mat-select>
+</mat-form-field>
